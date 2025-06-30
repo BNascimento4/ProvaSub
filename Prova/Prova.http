@@ -1,0 +1,59 @@
+### Login com credenciais corretas
+POST http://localhost:5000/api/auth/
+Content-Type: application/json
+
+{
+  "email": "usuario@example.com",
+  "senha": "senha123"
+}
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "nome": "usuario",
+  "email": "usuario@example.com",
+  "senha": "senha123"
+}
+### 
+POST http://localhost:5000/api/lancamentos
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "valor": 500.00,
+  "descricao": "Salário",
+  "data": "2025-06-30T00:00:00",
+  "categoriaId": 1,
+  "tipo": "receita"
+}
+
+### 
+
+GET http://localhost:5000/api/lancamentos
+Authorization: Bearer 
+
+### 
+PUT http://localhost:5000/api/lancamentos/1
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "valor": 500.00,
+  "descricao": "Salário",
+  "data": "2025-06-30T00:00:00",
+  "categoriaId": 1,
+  "tipo": "receita"
+}
+###
+POST http://localhost:5000/api/lancamentos
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "valor": 500.00,
+  "descricao": "Salário",
+  "data": "2025-06-30T00:00:00",
+  "categoriaId": 1,
+  "tipo": "receita"
+}
